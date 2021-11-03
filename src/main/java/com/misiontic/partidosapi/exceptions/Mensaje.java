@@ -4,13 +4,10 @@ public class Mensaje {
     private String type;
     private String mensaje;
 
-    public Mensaje(){
-        this.type = "";
-        this.mensaje = "";
-    }  
     public Mensaje(String type,String mensaje){
         this.type = type;
         this.mensaje = mensaje;
+
     }
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
