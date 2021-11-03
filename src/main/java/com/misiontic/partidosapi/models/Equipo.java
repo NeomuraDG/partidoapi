@@ -1,4 +1,6 @@
 package com.misiontic.partidosapi.models;
+import javax.validation.constraints.NotEmpty;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,7 +9,10 @@ public class Equipo {
 
    @Id
    private String id;
+
+   @NotEmpty(message = "El campo nombre no puede estar vacio")
    private String nombre;
+
    private String escudo;
    private String ciudad;
 
@@ -15,6 +20,14 @@ public class Equipo {
    public Equipo(){
 
    }
+
+   public Equipo(String id,String nombre, String escudo, String ciudad){
+    this.id = id;
+    this.nombre = nombre;
+    this.escudo = escudo;
+    this.ciudad = ciudad;
+}
+
 
    public void setId(String id) {
        this.id = id;
