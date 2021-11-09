@@ -3,9 +3,8 @@ package com.misiontic.partidosapi.models;
 public class Partido {
 private String id;
 private String Usuario;
-private String nombre;
-private String local;
-private String visitante;
+private Equipo local;
+private Equipo visitante;
 private String fecha;
 private int goles_visitantes;
 private int goles_local;
@@ -24,20 +23,18 @@ public void setGoles_local(int goles_local) {
 public void setGoles_visitantes(int goles_visitantes) {
     this.goles_visitantes = goles_visitantes;
 }
-public void setLocal(String local) {
+public void setLocal(Equipo local) {
     this.local = local;
 }
 
 public void setId(String id) {
     this.id = id;
 }
-public void setNombre(String nombre) {
-    this.nombre = nombre;
-}
+
 public void setUsuario(String usuario) {
     Usuario = usuario;
 }
-public void setVisitante(String visitante) {
+public void setVisitante(Equipo visitante) {
     this.visitante = visitante;
 }
 public String getFecha() {
@@ -52,16 +49,14 @@ public int getGoles_visitantes() {
 public String getId() {
     return id;
 }
-public String getLocal() {
+public Equipo getLocal() {
     return local;
 }
-public String getNombre() {
-    return nombre;
-}
+
 public String getUsuario() {
     return Usuario;
 }
-public String getVisitante() {
+public Equipo getVisitante() {
     return visitante;
 }
 

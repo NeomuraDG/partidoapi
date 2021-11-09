@@ -9,6 +9,8 @@ public class Usuario {
     private String correo;
     private String username;
     private String password;
+    private String rol;
+    private String token;
 
     public Usuario(String id,String nombre,String correo,String password,String username){
         this.id=id;
@@ -20,6 +22,22 @@ public class Usuario {
 
     public Usuario(){
 
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public void setUsername(String username) {
